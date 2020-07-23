@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Caso práctico 1</title>
+
+    <script type="text/javascript">
+    
+        function greaterNum(){
+            let value1 = parseFloat(document.getElementById("num1").value);
+            let value2 = parseFloat(document.getElementById("num2").value);
+            if (value1 > value2) {
+                alert(`El primer valor (${value1}) es mayor que el segundo valor (${value2}).`)
+            } else if (value1 === value2) {
+                alert(`El primer y el segundo valor (${value1}) son iguales`) 
+            } else {
+                alert(`El segundo valor (${value2}) es mayor que el primer valor (${value1}).`)
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Caso práctico 1</h1>
+    <h2>Programa que usa el condicional <strong>IF</strong></h2>
+    <h3>Para calcular el mayor entre enteros, rellene los espacios abajo:</h3>
+    <form action="">
+        <label class="label1">El primer valor</label>
+        <input type="text" id="num1"/>
+        <br />
+        <br />
+        <label class="label1">El segundo valor</label>
+        <input type="text" id="num2"/>
+
+        <br />
+        <br />
+        <br />
+
+        <button value="¿Cual es el mayor número?" onclick="greaterNum()">¿Cual es el mayor número?</button>
+    </form>
+
+</body>
+</html>
