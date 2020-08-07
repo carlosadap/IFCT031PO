@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descuentazo</title>
+</head>
+<body>
+  <!-- <ol>
+    <li>
+      La declaración <code>switch</code> evalúa una expresión, comparando el valor de esa expresión con una instancia <code>case</code> y ejecuta declaraciones asociadas a ese <code>case</code>, así como las declaraciones en los <code>case</code> que siguen.
+    </li>
+    <li>
+      El método <code>Number.parseInt()</code> analiza un argumento de cadena y devuelve un entero de la raíz o base especificada.
+    </li>
+    <li>
+      Para llamar a otro archivo con código JavaScript se utiliza la etiqueta <code>&ltscript&gt&lt/script&gt</code> con la dirección del archivo ubicada por el atributo <code>src</code>. Ejemplo:
+      <pre>
+        <code>
+          &ltscript src="./otroarchivojavascript.js"&gt&lt/script&gt
+        </code>
+      </pre>
+    </li>
+    <li>
+      El programa está añadido
+    </li>
+  </ol> -->
+  <header>
+    <h1>El programa que aplica descuentos</h1>
+  </header>
+  <div>
+    <label for="precio">Cual es el precio del producto?</label>
+  
+    <input type="number" id="precio" name="precio" min="0" required>
+  </div>
+
+  <div>
+    <label for="descuento">Tienes descuento?</label>
+
+    <input type="text" id="descuento" name="descuento"></input>
+  <div>
+
+  <div>
+    <button type="button" onclick="aplicarDescuento()">Aplicar el DESCUENTAZO</button>
+  </div>
+
+  <script>
+    function aplicarDescuento() {
+      const precio = document.getElementById("precio").value;
+      const codigo = document.getElementById("descuento").value;
+      let precioFinal;
+      switch (codigo) {
+        case ("0.5"):
+          precioFinal = precio - precio*codigo
+          break;
+        case ("0.2"):
+          precioFinal = precio - precio*codigo
+          break;
+        case("0.15"):
+          precioFinal = precio - precio*codigo
+          break;
+        default:
+          precioFinal = precio
+          break;
+      }
+      alert(`El precio final es: ${precioFinal}`)
+    }
+  </script>
+
+</body>
+</html>
