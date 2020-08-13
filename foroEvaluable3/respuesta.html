@@ -1,0 +1,33 @@
+<p>Para crear un nuevo objeto en JavaScript, podemos hacerlo de diferentes maneras, una de ellas es con el siguiente código:</p>
+<pre>
+  <code>
+    const objeto = { 
+      propiedad 1 : valor_1 , // propiedad_# puede ser un identificador...
+      2 : valor_2             // o un número... 
+      "propiedad n": valor_n; // o una cadena
+    }
+  </code>
+</pre>
+<p>Así, para crear el objeto "persona" con las propiedades requeridas: </p>
+<pre>
+  <code>
+    const persona = {
+      Nombre: "Francisco",
+      Apellidos: "Prieto Garcia",
+      Edad: 43,
+    }
+  </code>
+</pre>
+<p>Para mostrar en pantalla los datos de un otro archivo, primero tenemos que conectar ambos archivos, como por ejemplo utilizando el comando <code>&lt;script&gt;</code></p>
+<pre>
+  <code>
+    &lt;script type="text/javascript" src="archivodelobjeto.js"&gt;&lt;/script&gt;
+  </code>
+</pre>
+<p>Luego, una manera para que el objeto aparezca en la pantalla es convertirlo en JSON y entonces añadirlo al elemento de interés del HTML por intermedio del método <code>innerHTML</code>.</p>
+
+<pre>
+  <code>
+    &lt;script&gt; document.querySelector(".obExterno").innerHTML = JSON.stringify(persona); &lt;/script&gt;
+  </code>
+</pre>
