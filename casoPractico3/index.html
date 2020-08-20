@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caso Práctico 3</title>
+
+  <script src="classes.js"></script>
+  <style>
+    form {
+      margin: 0 auto;
+      width: 400px;
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    form li + li {
+      margin-top: 1em;
+    }
+
+    label {
+      display: inline-block;
+      width: 3.25em;
+      /* text-align: right; */
+    }
+
+    input:focus {
+      border-color: #000;
+    }
+
+    form div {
+      text-align: center;
+      /* font-size: 10em; */
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>
+      Tarea evaluable 
+    </h1>
+  
+    <h2>
+      Caso Práctico 3
+    </h2>
+  
+    <p>
+      Según lo estudiado, sabemos que en Javascript podemos crear objetos de diferentes formas e incluso podemos utilizar la herencia entre objetos y sus propiedades. 
+    </p>
+    <p>
+      En este ejercicio crearemos objeto “Coche” y objeto “Moto”. En ambos objetos definimos tipo, modelo, marca, color y ruedas. 
+    </p>
+    <p>
+      En objeto "Coche" tenemos a mayores propiedad "tracción" y otra llamada "extras" y en objeto "Moto" a mayores creamos la propiedad "velocidad" 
+    </p>
+  
+    <p>
+      De esta manera, utilizando los comandos necesarios, muestra en pantalla lo siguiente o algo similar (ver archivo adjunto).
+    </p>
+    <img src="vehiculos.png" alt="Descripción de la tarea" width="100%">
+  </div>
+  
+  <form action="">
+    <h1>Crea tu vehiculo</h1>
+    <hr> 
+    <ul>
+      <li>
+        <label for="coche">Coche</label>
+        <input type="radio" name="tipo" id="coche" value="Coche" onclick="ShowHideDiv()">  
+      </li>
+      <li>     
+        <label for="moto">Moto</label>
+        <input type="radio" name="tipo" id="moto" value="Moto" onclick="ShowHideDiv()">
+      </li>
+      <li>
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo">
+      </li>
+      <li>
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca">
+      </li>
+      <li>
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color">
+      </li>
+      <li>
+        <label for="ruedas">Ruedas:</label>
+        <input type="number" id="nRuedas" name="nRuedas"></li>
+    </ul>
+    <hr>
+    <div>
+      <button type="submit">Crear</button>
+    </div>
+  </form>
+
+</body>
+</html>
