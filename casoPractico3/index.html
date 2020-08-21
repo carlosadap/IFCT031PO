@@ -6,55 +6,8 @@
   <title>Caso Práctico 3</title>
 
   <script src="classes.js"></script>
-  <style>
-    form {
-      margin: 0 auto;
-      width: 400px;
-      padding: 1em;
-      border: 1px solid #CCC;
-      border-radius: 1em;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    form li + li {
-      margin-top: 1em;
-    }
-
-    label {
-      display: inline-block;
-      width: 3.25em;
-      /* text-align: right; */
-    }
-
-    input:focus {
-      border-color: #000;
-    }
-
-    form div {
-      text-align: center;
-      /* font-size: 10em; */
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    button {
-      background-color: #4CAF50; /* Green */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="showVehicule.js"></script>
 </head>
 <body>
   <div>
@@ -82,8 +35,8 @@
     <img src="vehiculos.png" alt="Descripción de la tarea" width="100%">
   </div>
   
-  <form action="">
-    <h1>Crea tu vehiculo</h1>
+  <form>
+    <h1>Añadir un vehiculo</h1>
     <hr> 
     <ul>
       <li>
@@ -112,9 +65,49 @@
     </ul>
     <hr>
     <div>
-      <button type="submit">Crear</button>
+      <button type="button" onclick="showVehicule()">Crear Vehiculo</button>
     </div>
   </form>
 
+  <div>
+    <table id="tableCoches">
+      <thead>
+        <tr>
+          <th colspan="6">Coches:</th>
+        </tr>
+        <tr>
+          <td>Modelo</td>
+          <td>Marca</td>
+          <td>Color</td>
+          <td>Ruedas</td>
+          <td>Tracción</td>
+          <td>Extras</td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <table id="tableCoches">
+      <thead>
+        <tr>
+          <th colspan="5">Motos:</th>
+        </tr>
+        <tr>
+          <td>Modelo</td>
+          <td>Marca</td>
+          <td>Color</td>
+          <td>Ruedas</td>
+          <td>Velocidad</td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+    <p id="display"></p>
 </body>
 </html>
