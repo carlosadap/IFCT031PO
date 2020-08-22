@@ -1,18 +1,36 @@
 function addVehicule() {
   const vehicule = document.querySelector('input[name="tipo"]:checked').value;
-  const tableSelector = vehicule === "Coche" ? "#tableCoches" : "#tableMotos";
-  const tableRef = document.querySelector(tableSelector).querySelector("tbody");
+  const tableID = vehicule === "Coche" ? "#tableCoches" : "#tableMotos";
+  const tableRef = document.querySelector(tableID).querySelector("tbody");
 
-  const newRow = tableRef.insertRow();
-  const newCell = newRow.insertCell;
-  
-  const newContent = document.createTextNode('New row'); 
+ 
 
-  
-  newPar.appendChild(newContent);
-  let currentPar = document.querySelector("#display");
-  document.body.insertBefore(newPar, currentPar)
+  tableRef.insertRow(-1); // add new tr
 
-  // let where = document.querySelector("#display");
-  // where.insertAdjacentHTML('afterend', content); 
+  const rowRef = document.querySelector(tableID).querySelector("tbody").querySelector("tr:last-child"); 
+
+  if (vehicule === "Coche") {
+    const cocheArr = [
+      document.querySelector('input[name="modelo"]').value,
+      document.querySelector('input[name="marca"]').value,
+      document.querySelector('input[name="color"]').value,
+      document.querySelector('input[name="nRuedas"]').value,
+      document.querySelector('input[name="traccion"]').value,
+      document.querySelector('textarea[name="extras"]').value
+    ]  
+    for (let i = 0; i < 6; i++) {
+      rowRef.insertCell(-1).appendChild(document.createTextNode(cocheArr[i]));
+    }
+  } else {
+    const motoArr = [
+      document.querySelector('input[name="modelo"]').value,
+      document.querySelector('input[name="marca"]').value,
+      document.querySelector('input[name="color"]').value,
+      document.querySelector('input[name="nRuedas"]').value,
+      document.querySelector('input[name="velocidad"]').value
+    ] 
+    for (let i = 0; i < 5; i++) {
+      rowRef.insertCell(-1).appendChild(document.createTextNode(motoArr[i]));
+    }
+  }
 }
