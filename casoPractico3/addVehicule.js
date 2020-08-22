@@ -1,7 +1,14 @@
 function addVehicule() {
-  let newPar = document.createElement("p");
-  let content = document.querySelector('input[name="tipo"]:checked').value;
-  let newContent = document.createTextNode(content);
+  const vehicule = document.querySelector('input[name="tipo"]:checked').value;
+  const tableSelector = vehicule === "Coche" ? "#tableCoches" : "#tableMotos";
+  const tableRef = document.querySelector(tableSelector).querySelector("tbody");
+
+  const newRow = tableRef.insertRow();
+  const newCell = newRow.insertCell;
+  
+  const newContent = document.createTextNode('New row'); 
+
+  
   newPar.appendChild(newContent);
   let currentPar = document.querySelector("#display");
   document.body.insertBefore(newPar, currentPar)
