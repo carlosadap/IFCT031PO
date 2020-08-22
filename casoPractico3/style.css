@@ -18,8 +18,8 @@ form li + li {
 
 label {
   display: inline-block;
-  width: 3.25em;
-  /* text-align: right; */
+  width: 4.5em;
+  vertical-align: top;
 }
 
 input:focus {
@@ -57,3 +57,13 @@ tfoot {
     background-color: #333;
     color: #fff;
 }
+
+.spaceLeft {
+  margin-left: 1.5em;
+}
+
+.hiddenCoche,
+.hiddenMoto {
+  display: none;
+}
+

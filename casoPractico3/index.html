@@ -7,7 +7,8 @@
 
   <script src="classes.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="showVehicule.js"></script>
+  <script src="addVehicule.js"></script>
+  <script src="showExtras.js"></script>
 </head>
 <body>
   <div>
@@ -41,11 +42,10 @@
     <ul>
       <li>
         <label for="coche">Coche</label>
-        <input type="radio" name="tipo" id="coche" value="Coche" onclick="ShowHideDiv()">  
-      </li>
-      <li>     
-        <label for="moto">Moto</label>
-        <input type="radio" name="tipo" id="moto" value="Moto" onclick="ShowHideDiv()">
+        <input type="radio" name="tipo" id="coche" value="Coche" onclick="showExtrasCoche()">  
+        
+        <label for="moto" class="spaceLeft">Moto</label>
+        <input type="radio" name="tipo" id="moto" value="Moto" onclick="showExtrasMoto()">
       </li>
       <li>
         <label for="modelo">Modelo:</label>
@@ -61,11 +61,24 @@
       </li>
       <li>
         <label for="ruedas">Ruedas:</label>
-        <input type="number" id="nRuedas" name="nRuedas"></li>
+        <input type="number" id="nRuedas" name="nRuedas">
+      </li>
+      <li class="hiddenCoche">
+        <label for="traccion">Tracción:</label>
+        <input type="text" name="traccion" id="traccion">
+      </li>
+      <li class="hiddenCoche">
+        <label for="extras">Extras:</label>
+        <textarea name="extras" id="extras" cols="30" rows="10"></textarea>
+      </li>
+      <li class="hiddenMoto">
+        <label for="velocidad">Velocidad:</label>
+        <input type="number" name="velocidad" id="velocidad">
+      </li>
     </ul>
     <hr>
     <div>
-      <button type="button" onclick="showVehicule()">Crear Vehiculo</button>
+      <button type="button" onclick="addVehicule()">Crear Vehiculo</button>
     </div>
   </form>
 

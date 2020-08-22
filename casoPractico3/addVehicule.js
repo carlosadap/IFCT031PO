@@ -1,4 +1,4 @@
-function showVehicule() {
+function addVehicule() {
   let newPar = document.createElement("p");
   let content = document.querySelector('input[name="tipo"]:checked').value;
   let newContent = document.createTextNode(content);
