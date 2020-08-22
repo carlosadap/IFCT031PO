@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario2</title>
+  <style>
+    body {
+      font-size: 18px;
+    }
+
+    label {
+      display: inline-block;
+      width: 10em;
+      vertical-align: middle;
+      height: auto;
+    }
+
+    div {
+      margin: 0.5em 0;
+      /* vertical-align: middle; */
+    }
+
+    input {
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario</h1>
+  <form>
+    <div>
+      <label for="name">Nombre:</label>
+      <input type="text" name="name" id="name">
+    </div>
+    <div>
+      <label for="email">Correo electrónico:</label>
+      <input type="text" name="email" id="email">
+    </div>
+    <div>
+      <label for="tel">Teléfono:</label>
+      <input type="text" name="tel" id="tel">
+    </div>
+    <div>
+      <label for="comment">Comentarios:</label>
+      <textarea id="comment" name="comment" rows="5" cols="20">
+      </textarea>
+    </div>
+    <div>
+      <input type="button" value="Borrar">
+      <input type="button" value="Enviar">
+    </div>
+
+  </form>
+</body>
+</html>
