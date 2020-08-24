@@ -32,15 +32,15 @@
   <form>
     <div>
       <label for="name">Nombre:</label>
-      <input type="text" name="name" id="name">
+      <input type="text" name="name" id="name" required>
     </div>
     <div>
       <label for="email">Correo electrónico:</label>
-      <input type="text" name="email" id="email">
+      <input type="email" name="email" id="email" required>
     </div>
     <div>
       <label for="tel">Teléfono:</label>
-      <input type="text" name="tel" id="tel">
+      <input type="text" name="tel" id="tel" required>
     </div>
     <div>
       <label for="comment">Comentarios:</label>
@@ -48,8 +48,8 @@
       </textarea>
     </div>
     <div>
-      <input type="button" value="Borrar">
-      <input type="button" value="Enviar">
+      <input type="reset" value="Borrar">
+      <input type="submit" value="Enviar">
     </div>
 
   </form>
