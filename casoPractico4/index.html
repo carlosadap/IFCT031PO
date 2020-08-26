@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario</title>
   <style>
-    body{
-      text-align: center;
-      padding: 8%;
+    html, body {
+      height: 98%;
     }
+    
     form {
-      display: inline-block;
+      /* display: inline-block; */
       text-align: left;
     }
 
@@ -18,16 +18,25 @@
       margin: 0.75em;
     }
 
-    div div {
+    div div div{
       margin: 0;
     }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
   </style>
 </head>
 <body>
-  <h1>Formulario de inscripción</h1>
-  <form>
-    <div>
-      <label for="name">Nombre de usuario</label>
+  <div class="container">
+    <form>
+      <h1>Formulario de inscripción</h1>
+      <div>
+        <label for="name">Nombre de usuario</label>
       <input type="text" id="name" name="name" required>
     </div>
     <div>
@@ -271,6 +280,7 @@
       <input type="submit" value="Enviar">
       <input type="reset" value="Cancelar">
     </div>
+  </div>
   </form>
 </body>
 </html>
