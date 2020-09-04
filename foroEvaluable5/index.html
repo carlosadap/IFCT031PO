@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de registros</title>
+  <style>
+    label {
+      display: block;
+      width: 1rem;
+    }
+
+    input {
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Este es un formulario de registros</h1>
+  <form>
+    <div>
+      <label for="name">Nombre</label>
+      <input type="text" name="name" id="name" size="10" required>
+    </div>
+    <div>
+      <label for="apellidos">Apellidos</label>
+      <input type="text" name="apellidos" id="apellidos" size="30" required>
+    </div>
+    <div>
+      <label for="nif">NIF</label>
+      <input type="text" class="form-control" size="10"  maxlength="9" name="nif" pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" title="NIFs españoles formados por 8 dígitos más una letra y los NIFs o números de extranjería formados por una letra, 7 dígitos y una letra," required>
+    </div>
+    <div>
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email">
+    </div>
+    <div>
+      <input type="submit" value="Enviar">
+    </div>
+  </form>
+</body>
+</html>
