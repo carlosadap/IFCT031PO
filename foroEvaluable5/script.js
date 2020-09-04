@@ -17,6 +17,8 @@ function setValues() {
 function checkValues(object) {
   if (object.name) {
     alert(object.name)
+  } else {
+    alert("Nombre tiene que estar re")
   }
 }
 
