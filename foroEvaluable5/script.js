@@ -1,18 +1,34 @@
-const name = document.querySelector("#name").value;
-const apellidos = document.querySelector("#apellidos").value;
-const nif = document.querySelector("#nif").value;
-const email = document.querySelector("#email").value;
-const content = document.querySelector("#content");
-const form = document.querySelector("form")
+let sendBtn = document.querySelector("#sendBtn")
 
-function showOnScreen() {
-  content.textContent = `Su nombre es ${name}, sus apellidos son ${apellidos}, su NIF es ${nif} y su email es ${email}`
-  alert(`Su nombre es ${name}, sus apellidos son ${apellidos}, su NIF es ${nif} y su email es ${email}`)
+
+function setValues() {
+  // let name = document.querySelector("#name").value;
+  // let apellidos = document.querySelector("#apellidos").value;
+  // let nif = document.querySelector("#nif").value;
+  // let email = document.querySelector("#email").value;
+  const data = new Object() 
+  data.name = document.querySelector("#name").value;
+  data.apellidos = document.querySelector("#apellidos").value;
+  data.nif = document.querySelector("#nif").value;
+  data.email = document.querySelector("#email").value;
+  return data;  
 }
 
-function handleForm(event) { 
-  event.preventDefault(); 
-  showOnScreen();
-} 
+function checkValues(object) {
+  if (object.name) {
+    alert(object.name)
+  }
+}
 
-form.addEventListener('submit', handleForm);
+
+function nameValidation(name) {
+  if (name) {
+    alert("Hey there")
+  }
+}
+
+sendBtn.addEventListener("click", () => {
+  const values = setValues();
+  checkValues(values);
+  printValues();
+})
