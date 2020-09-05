@@ -1,5 +1,6 @@
 const sendBtn = document.querySelector("#sendBtn");
 const form = document.querySelector("form");
+const content = document.querySelector("#content")
 
 
 function setValues() {
@@ -12,7 +13,7 @@ function setValues() {
 }
 
 function printValues(object) {
-  alert(object.name + object.apellidos + object.nif + object.email)
+  content.textContent = `Su es ${object.name}, su apellido es ${object.apellidos}, su nif es ${object.nif} y su email es ${object.email}`
 }
 
 form.addEventListener("submit", e => {
