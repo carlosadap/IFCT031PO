@@ -1,11 +1,8 @@
-let sendBtn = document.querySelector("#sendBtn")
+const sendBtn = document.querySelector("#sendBtn");
+const form = document.querySelector("form");
 
 
 function setValues() {
-  // let name = document.querySelector("#name").value;
-  // let apellidos = document.querySelector("#apellidos").value;
-  // let nif = document.querySelector("#nif").value;
-  // let email = document.querySelector("#email").value;
   const data = new Object() 
   data.name = document.querySelector("#name").value;
   data.apellidos = document.querySelector("#apellidos").value;
@@ -14,23 +11,12 @@ function setValues() {
   return data;  
 }
 
-function checkValues(object) {
-  if (object.name) {
-    alert(object.name)
-  } else {
-    alert("Nombre tiene que estar re")
-  }
+function printValues(object) {
+  alert(object.name + object.apellidos + object.nif + object.email)
 }
 
-
-function nameValidation(name) {
-  if (name) {
-    alert("Hey there")
-  }
-}
-
-sendBtn.addEventListener("click", () => {
-  const values = setValues();
-  checkValues(values);
-  printValues();
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const values = setValues()
+  printValues(values)
 })
