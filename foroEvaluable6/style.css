@@ -1,11 +1,13 @@
 body {
   background-color: rgb(212, 234, 248);
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   background-color: rgb(251, 251, 251);
-  border-radius: 5%;
-  width: 50%;
+  border-radius: 2%;
+  width: 55%;
   margin: 0 auto;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -13,8 +15,47 @@ body {
 
 header h1 {
   color: rgb(119, 84, 238);
+  padding-top: 2rem;
 }
 header p {
   font-weight: 700;
   font-size: small;
+  padding: 1rem;
 }
+
+form div {
+  padding: 1rem;
+  display: block;
+  text-align: left;
+  padding: 1rem;
+}
+
+label {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: small;
+}
+
+input, textarea {
+  border: 2px solid rgb(172, 164, 200);
+  border-radius: 0.25rem;
+  padding: 0.4rem;
+  width: 90%;
+}
+
+input[type="button"] {
+  color: rgb(119, 84, 238);
+  height: 3rem;
+  background-color: rgb(212, 234,248);
+  border-radius: 0.75rem;
+  text-align: center;
+  width: 100%;
+}
+
+
+footer p {
+  font-size: x-small;
+  text-align: left;
+  padding: 1rem;
+}
+
