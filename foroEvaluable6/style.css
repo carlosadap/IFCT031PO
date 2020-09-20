@@ -43,13 +43,13 @@ input, textarea {
   width: 90%;
 }
 
-input[type="button"] {
+input[type="submit"] {
   color: rgb(119, 84, 238);
   height: 3rem;
   background-color: rgb(212, 234,248);
   border-radius: 0.75rem;
-  text-align: center;
-  width: 100%;
+  width: 95%;
+  display: block;
 }
 
 
